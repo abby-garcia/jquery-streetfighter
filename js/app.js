@@ -37,7 +37,6 @@ $(document).ready(function(){
     .keyup(function(event){
       if(event.keyCode===88){
         $('#saxaphone-music')[0].pause();
-        // $('#saxaphone-music')[0].load();
         $('.ryu-cool').hide();
         $('.ryu-still').show();
       }
