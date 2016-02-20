@@ -23,16 +23,24 @@ $(document).ready(function(){
     .mouseup(function(){
         $('.ryu-throwing').hide();
         $('.ryu-ready').show();
-    })
+    });
 
-    .keydown(function(event){ // how do I know it's still referencing the ".ryu" class? i definately broke it after adding this
+    $('body').keydown(function(event){ // how do I know it's still referencing the ".ryu" class? i definately broke it after adding this
     	if(event.keyCode === 88){
     		playSaxMusic();
-    		// alert("Hello!");
     	  $('.ryu-throwing').hide();
     	  $('.ryu-ready').hide();
     	  $('.ryu-cool').show();
+        $('.ryu-still').hide();
     	}
+    })
+    .keyup(function(event){
+      if(event.keyCode===88){
+        $('#saxaphone-music')[0].pause();
+        // $('#saxaphone-music')[0].load();
+        $('.ryu-cool').hide();
+        $('.ryu-still').show();
+      }
     });
 
   
@@ -52,7 +60,7 @@ function playHadouken() {
 
 function playSaxMusic(){
 	$('#saxaphone-music')[0].volume = 0.5;
-    $('#saxaphone-music')[0].load();
+    // $('#saxaphone-music')[0].load();
     $('#saxaphone-music')[0].play();
 
 
