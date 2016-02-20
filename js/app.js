@@ -25,7 +25,7 @@ $(document).ready(function(){
         $('.ryu-ready').show();
     })
 
-    .keydown(function(){ // how do I know it's still referencing the ".ryu" class? i definately broke it after adding this
+    .keydown(function(event){ // how do I know it's still referencing the ".ryu" class? i definately broke it after adding this
     	if(event.keyCode === 88){
     		playSaxMusic();
     		// alert("Hello!");
