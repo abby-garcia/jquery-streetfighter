@@ -23,7 +23,7 @@ $(document).ready(function(){
     .mouseup(function(){
         $('.ryu-throwing').hide();
         $('.ryu-ready').show();
-    });
+    })
 
     .keydown(function(){ // how do I know it's still referencing the ".ryu" class? i definately broke it after adding this
     	if(event.keyCode === 88){
@@ -33,11 +33,16 @@ $(document).ready(function(){
     	  $('.ryu-ready').hide();
     	  $('.ryu-cool').show();
     	}
-    })
+    });
 
   
 });
 
+//definately confused on where the final " })" should be
+// and where to put and NOT to put the semi colon
+
+//where should I put:
+// $('.instructions').show();
 
 function playHadouken() {
     $('#hadouken-sound')[0].volume = 0.5;

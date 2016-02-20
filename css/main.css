@@ -65,12 +65,22 @@ body {
   outline: red 1px solid;
 }
 
+/*Instructions sections*/
 
+.first-step, .second-step{
+  display:none;
+  font-family: 'Sigmar One', cursive;
+}
 
+.first-step{
+  margin-top: 5%;
+  color:purple;
+}
 
-
-
-
+.second-step{
+  margin-top: 20%;
+  color:tomato;
+}
 
 
 
